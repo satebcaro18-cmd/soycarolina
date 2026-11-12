@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Carolina Blanco Alvarado | Docente de Francés</title>
+
+<meta name="description" content="Portafolio profesional de Carolina Blanco Alvarado, docente de francés con 15 años de experiencia.">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --azul: #142b50;
+    --azul2: #203f70;
+    --rojo: #d52b40;
+    --blanco: #ffffff;
+    --fondo: #f5f7fb;
+    --texto: #38445a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--texto);
+    background: var(--fondo);
+    overflow-x: hidden;
+}
+
+/* NAVEGACIÓN */
+
+header {
+    background: white;
+    height: 82px;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0,0,0,.06);
+}
+
+.logo {
+    color: var(--azul);
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--rojo);
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--azul);
+    font-size: 12px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--rojo);
+}
+
+/* BANNER PRINCIPAL */
+
+.hero {
+    min-height: 620px;
+    background: linear-gradient(120deg, #102441, #203f70);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 90px 10%;
+    overflow: hidden;
+    color: white;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 50%;
+    right: -100px;
+    top: 40px;
+    animation: rotar 25s linear infinite;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border: 1px solid rgba(255,255,255,.10);
+    border-radius: 50%;
+    right: -20px;
+    top: 115px;
+    animation: rotar 18s linear infinite reverse;
+}
+
+@keyframes rotar {
+    to { transform: rotate(360deg); }
+}
+
+.hero-contenido {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+    animation: aparecer 1.2s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.etiqueta {
+    color: #ff9ca8;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 70px);
+    line-height: 1.12;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #ff6678;
+}
+
+.hero p {
+    color: #dce5f1;
+    font-size: 16px;
+    line-height: 1.9;
+    max-width: 630px;
+    margin-bottom: 35px;
+}
+
+.boton {
+    display: inline-block;
+    background: var(--rojo);
+    color: white;
+    text-decoration: none;
+    padding: 15px 28px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.boton:hover {
+    background: #b51e32;
+    transform: translateY(-4px);
+}
+
+/* FRANJA DE EXPERIENCIA */
+
+.francia {
+    background: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    padding: 35px 8%;
+    box-shadow: 0 5px 20px rgba(0,0,0,.04);
+}
+
+.francia div {
+    padding: 10px;
+    border-right: 1px solid #e5e8ee;
+}
+
+.francia div:last-child {
+    border: none;
+}
+
+.francia h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--rojo);
+    font-size: 37px;
+}
+
+.francia p {
+    color: var(--azul);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* SECCIONES */
+
+section {
+    padding: 95px 10%;
+}
+
+.titulo {
+    color: var(--azul);
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.subtitulo {
+    color: #788397;
+    font-size: 14px;
+    margin-bottom: 38px;
+}
+
+.linea {
+    width: 65px;
+    height: 4px;
+    background: var(--rojo);
+    margin-bottom: 25px;
+}
+
+/* SOBRE MÍ */
+
+.sobre {
+    background: white;
+}
+
+.sobre-contenido {
+    max-width: 900px;
+    line-height: 2;
+    font-size: 15px;
+}
+
+.sobre-contenido p {
+    margin-bottom: 18px;
+}
+
+.destacado {
+    margin-top: 30px;
+    padding: 25px;
+    background: #f2f5fa;
+    border-left: 5px solid var(--rojo);
+    color: var(--azul);
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+}
+
+/* EXPERIENCIA */
+
+.experiencia {
+    background: #eef2f8;
+    text-align: center;
+}
+
+.experiencia .linea {
+    margin: 20px auto 30px;
+}
+
+.experiencia-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.experiencia-card {
+    background: white;
+    padding: 38px 20px;
+    border-radius: 9px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.04);
+    transition: .3s;
+}
+
+.experiencia-card:hover {
+    transform: translateY(-8px);
+}
+
+.experiencia-card h3 {
+    color: var(--rojo);
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+}
+
+.experiencia-card p {
+    color: var(--azul);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+/* FORMACIÓN */
+
+.formacion {
+    background: white;
+}
+
+.formacion-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 23px;
+}
+
+.formacion-card {
+    padding: 30px;
+    background: #f7f8fb;
+    border-radius: 8px;
+    border-top: 4px solid var(--azul);
+    transition: .3s;
+}
+
+.formacion-card:hover {
+    border-top-color: var(--rojo);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,.06);
+}
+
+.formacion-card .numero {
+    color: var(--rojo);
+    font-weight: 800;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.formacion-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--azul);
+    font-size: 21px;
+    line-height: 1.5;
+    margin: 12px 0;
+}
+
+.formacion-card p {
+    font-size: 13px;
+    color: #788397;
+}
+
+/* IDIOMA */
+
+.idioma {
+    background: var(--azul);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.idioma .titulo {
+    color: white;
+}
+
+.idioma .subtitulo {
+    color: #ccd8e9;
+}
+
+.certificado {
+    max-width: 620px;
+    margin: auto;
+    padding: 45px;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 12px;
+}
+
+.certificado h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+}
+
+.certificado .c1 {
+    display: inline-block;
+    margin: 20px 0;
+    background: var(--rojo);
+    padding: 12px 40px;
+    border-radius: 40px;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.certificado p {
+    color: #e0e7f2;
+    font-size: 14px;
+}
+
+/* CONTACTO */
+
+.contacto {
+    background: white;
+    text-align: center;
+}
+
+.contacto .linea {
+    margin: 20px auto 30px;
+}
+
+.contacto p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    line-height: 1.9;
+    font-size: 14px;
+}
+
+/* PIE */
+
+footer {
+    background: #0c1d34;
+    color: #cbd5e1;
+    padding: 35px 10%;
+    text-align: center;
+    font-size: 12px;
+}
+
+footer strong {
+    color: white;
+}
+
+/* ANIMACIÓN AL DESPLAZARSE */
+
+.revelar {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.revelar.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* CELULARES */
+
+@media(max-width: 800px) {
+    header {
+        height: auto;
+        padding: 20px 5%;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .hero {
+        min-height: 540px;
+        padding: 70px 7%;
+    }
+
+    .francia {
+        padding: 25px 3%;
+    }
+
+    .francia h2 {
+        font-size: 28px;
+    }
+
+    .francia p {
+        font-size: 10px;
+    }
+
+    section {
+        padding: 70px 7%;
+    }
+
+    .experiencia-grid,
+    .formacion-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo {
+        font-size: 31px;
+    }
+}
+
+@media(prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .revelar {
+        opacity: 1;
+        transform: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- MENÚ -->
+
+<header>
+    <div class="logo">CAROLINA <span>BLANCO</span></div>
+
+    <nav>
+        <a href="#inicio">INICIO</a>
+        <a href="#sobre">SOBRE MÍ</a>
+        <a href="#experiencia">EXPERIENCIA</a>
+        <a href="#formacion">FORMACIÓN</a>
+        <a href="#idioma">FRANCÉS</a>
+        <a href="#contacto">CONTACTO</a>
+    </nav>
+</header>
+
+<!-- BANNER PRINCIPAL -->
+
+<div class="hero" id="inicio">
+    <div class="hero-contenido">
+
+        <div class="etiqueta">
+            EDUCACIÓN · FRANCÉS · FORMACIÓN ACADÉMICA
+        </div>
+
+        <h1>
+            Carolina Blanco<br>
+            <span>Alvarado</span>
+        </h1>
+
+        <p>
+            Docente de francés de la Universidad de Costa Rica.
+            15 años de experiencia dedicados a la enseñanza,
+            la formación académica y el desarrollo educativo.
+        </p>
+
+        <a href="#sobre" class="boton">
+            CONOCE MI TRAYECTORIA →
+        </a>
+
+    </div>
+</div>
+
+<!-- DATOS DESTACADOS -->
+
+<div class="francia">
+    <div>
+        <h2>15</h2>
+        <p>AÑOS DE EXPERIENCIA</p>
+    </div>
+
+    <div>
+        <h2>05</h2>
+        <p>GRADOS ACADÉMICOS</p>
+    </div>
+
+    <div>
+        <h2>C1</h2>
+        <p>NIVEL DE FRANCÉS</p>
+    </div>
+</div>
+
+<!-- SOBRE MÍ -->
+
+<section class="sobre" id="sobre">
+    <div class="revelar">
+
+        <h2 class="titulo">Sobre mí</h2>
+        <div class="linea"></div>
+
+        <p class="subtitulo">
+            Mi perfil profesional y compromiso con la educación.
+        </p>
+
+        <div class="sobre-contenido">
+
+            <p>
+                Mi nombre es <strong>Carolina Blanco Alvarado</strong>.
+                Soy docente de francés de la
+                <strong>Universidad de Costa Rica (UCR)</strong>,
+                con 15 años de experiencia en el ámbito de la docencia.
+            </p>
+
+            <p>
+                A lo largo de mi trayectoria profesional he fortalecido
+                mi formación mediante estudios universitarios en
+                enseñanza del francés, evaluación educativa,
+                currículo y administración educativa.
+            </p>
+
+            <p>
+                Mi preparación académica y lingüística me permite
+                integrar diferentes perspectivas del campo educativo
+                y de la enseñanza de idiomas.
+            </p>
+
+        </div>
+
+        <div class="destacado">
+            "La educación es una herramienta fundamental para
+            construir oportunidades, desarrollar conocimientos
+            y transformar vidas."
+        </div>
+
+    </div>
+</section>
+
+<!-- EXPERIENCIA -->
+
+<section class="experiencia" id="experiencia">
+    <div class="revelar">
+
+        <h2 class="titulo">Experiencia profesional</h2>
+        <div class="linea"></div>
+
+        <p class="subtitulo">
+            Una trayectoria dedicada a la enseñanza y la educación.
+        </p>
+
+        <div class="experiencia-grid">
+
+            <div class="experiencia-card">
+                <h3>15</h3>
+                <p>AÑOS DE EXPERIENCIA DOCENTE</p>
+            </div>
+
+            <div class="experiencia-card">
+                <h3>05</h3>
+                <p>GRADOS ACADÉMICOS UNIVERSITARIOS</p>
+            </div>
+
+            <div class="experiencia-card">
+                <h3>C1</h3>
+                <p>COMPETENCIA LINGÜÍSTICA EN FRANCÉS</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FORMACIÓN ACADÉMICA -->
+
+<section class="formacion" id="formacion">
+    <div class="revelar">
+
+        <h2 class="titulo">Formación académica</h2>
+        <div class="linea"></div>
+
+        <p class="subtitulo">
+            Estudios universitarios y especialización profesional.
+        </p>
+
+        <div class="formacion-grid">
+
+            <div class="formacion-card">
+                <div class="numero">01 · BACHILLERATO</div>
+                <h3>Bachillerato en la Enseñanza del Francés</h3>
+                <p>Universidad de Costa Rica (UCR).</p>
+            </div>
+
+            <div class="formacion-card">
+                <div class="numero">02 · LICENCIATURA</div>
+                <h3>Licenciatura en la Enseñanza del Francés</h3>
+                <p>Universidad Estatal a Distancia (UNED).</p>
+            </div>
+
+            <div class="formacion-card">
+                <div class="numero">03 · MAESTRÍA</div>
+                <h3>Maestría en Educación con Énfasis en Evaluación</h3>
+                <p>Universidad Latina de Costa Rica.</p>
+            </div>
+
+            <div class="formacion-card">
+                <div class="numero">04 · MAESTRÍA</div>
+                <h3>Maestría en Educación con Énfasis en Currículo</h3>
+                <p>Universidad Latina de Costa Rica.</p>
+            </div>
+
+            <div class="formacion-card">
+                <div class="numero">05 · MAESTRÍA</div>
+                <h3>Maestría en Administración Educativa</h3>
+                <p>Universidad Americana (UAM).</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- COMPETENCIA LINGÜÍSTICA -->
+
+<section class="idioma" id="idioma">
+    <div class="revelar">
+
+        <h2 class="titulo">Competencia lingüística</h2>
+
+        <p class="subtitulo">
+            Formación y dominio del idioma francés.
+        </p>
+
+        <div class="certificado">
+
+            <h3>Langue Française</h3>
+
+            <div class="c1">C1</div>
+
+            <p>
+                Banda lingüística C1
+            </p>
+
+            <p style="margin-top:12px;">
+                Alianza Francesa
+            </p>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+
+<section class="contacto" id="contacto">
+    <div class="revelar">
+
+        <h2 class="titulo">Contacto</h2>
+        <div class="linea"></div>
+
+        <p>
+            Gracias por visitar mi portafolio profesional.
+            Este espacio representa mi trayectoria académica,
+            experiencia docente y compromiso con la educación
+            y la enseñanza del francés.
+        </p>
+
+        <p>
+            <strong>Carolina Blanco Alvarado</strong><br>
+            Docente de francés · Universidad de Costa Rica
+        </p>
+
+    </div>
+</section>
+
+<!-- PIE DE PÁGINA -->
+
+<footer>
+    <p>
+        © 2026 <strong>Carolina Blanco Alvarado</strong>.
+        Todos los derechos reservados.
+    </p>
+
+    <p style="margin-top:8px;">
+        Portafolio profesional · Enseñanza del francés
+    </p>
+</footer>
+
+<!-- JAVASCRIPT PARA ANIMACIONES -->
+
+<script>
+const elementos = document.querySelectorAll('.revelar');
+
+const observador = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+            entrada.target.classList.add('visible');
+            observador.unobserve(entrada.target);
+        }
+    });
+}, {
+    threshold: 0.12
+});
+
+elementos.forEach((elemento) => {
+    observador.observe(elemento);
+});
+</script>
+
+</body>
+</html>
